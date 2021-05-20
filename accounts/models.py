@@ -8,4 +8,3 @@ class User(AbstractUser):
 
 class Profile(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    email = models.EmailField(max_length=254, default='aaa@naver.com')
