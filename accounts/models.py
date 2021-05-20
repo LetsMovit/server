@@ -7,4 +7,4 @@ class User(AbstractUser):
     last_name = None
 
 class Profile(models.Model):
-    pass
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

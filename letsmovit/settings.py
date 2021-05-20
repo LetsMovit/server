@@ -148,6 +148,7 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'accounts.User'
 
+<<<<<<< HEAD
 # REST_FRAMEWORK = {
 #     'DEFAULT_PERMISSION_CLASSES': (
 #         'rest_framework.permissions.IsAuthenticated',
@@ -162,3 +163,5 @@ AUTH_USER_MODEL = 'accounts.User'
 # JWT_AUTH = {
 #     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
 # }
+=======
+>>>>>>> 8a298e5062449e3aaae14c47373ec2d2e0ac6826
