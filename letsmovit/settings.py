@@ -26,7 +26,7 @@ SECRET_KEY = '2ur&am-u8)4kpf&s35qcqtofc^6n%m#cqhp_e-5_a6a)zg!1lz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -147,4 +147,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'accounts.User'
+
 

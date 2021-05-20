@@ -13,6 +13,7 @@ from rest_framework.decorators import api_view
 @api_view(['POST'])
 def signup(request):
 	#1-1. Client에서 온 데이터를 받아서
+    print('!!!!!!!!!!!!!!!!!!!!',request.data)
     password = request.data.get('password')
     password_confirmation = request.data.get('passwordConfirmation')
 		
@@ -25,6 +26,7 @@ def signup(request):
     
 	#3. validation 작업 진행 -> password도 같이 직렬화 진행
     if serializer.is_valid(raise_exception=True):
+        print('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
         user = serializer.save()
         #4. 비밀번호 해싱 후 
         user.set_password(request.data.get('password'))
