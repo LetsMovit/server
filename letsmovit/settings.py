@@ -149,6 +149,7 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'accounts.User'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # REST_FRAMEWORK = {
 #     'DEFAULT_PERMISSION_CLASSES': (
 #         'rest_framework.permissions.IsAuthenticated',
@@ -165,3 +166,6 @@ AUTH_USER_MODEL = 'accounts.User'
 # }
 =======
 >>>>>>> 8a298e5062449e3aaae14c47373ec2d2e0ac6826
+=======
+
+>>>>>>> 2c605ecb9fe7594a39ef6aecee46449ddddc8390
