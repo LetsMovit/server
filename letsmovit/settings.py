@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import datetime
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,11 +39,17 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'movies.apps.MoviesConfig',
 
+    #cors
+    'corsheaders',
+
+    # auth
     'django_seed',
     'rest_framework',
     'rest_framework.authtoken',
-
     'rest_auth',
+
+    #swagger
+    'drf_yasg', 
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,7 +59,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# 모든 Origin 허용
+CORS_ALLOW_ALL_ORIGINS = True
+
 MIDDLEWARE = [
+    #cors
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
