@@ -17,4 +17,6 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('username', 'password', 'email', 'like_genres', 'like_locations', 'like_comments' )
+        # fields = ('username', 'password', 'email')
+        fields = ('username', 'password', 'email',)
+        read_only = ('like_genres', 'like_locations', 'like_comments', 'comments',)
