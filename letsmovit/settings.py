@@ -33,8 +33,12 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
 
     # rest api app setting
+    # 'accounts',
+    # 'movies',
     'accounts.apps.AccountsConfig',
-    
+    'movies.apps.MoviesConfig',
+
+    'django_seed',
     'rest_framework',
     'rest_framework.authtoken',
 
@@ -131,8 +135,16 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'accounts.User'
 
 REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-    )
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
 }
