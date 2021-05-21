@@ -36,12 +36,13 @@ class GenreSerializer(serializers.ModelSerializer):
 class MovieSerializer(serializers.ModelSerializer):
     # Movie - Genre =  M:N
     genres = GenreSerializer(read_only=True, many=True)
-    locations = serializers.PrimaryKeyRelatedField(many=True, queryset=Location.objects.all())
+    # locations = serializers.PrimaryKeyRelatedField(many=True, queryset=Location.objects.all())
 
 
     class Meta:
         model = Movie
         fields = '__all__'
+        read_only_fields = ('genres', 'locations', )
 
 
 
