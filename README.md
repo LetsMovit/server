@@ -2,7 +2,20 @@
 
 [2021.05.19](#2021.05.19)
 
+- accounts, signup, Detail페이지 Prototype완성
+
 [2021.05.20](#2021.05.20)
+
+- User => User + Profile
+- SignUp finish
+
+[2021.05.21](#2021.05.21) 
+
+- loaddata 실패 후,  axios로 요청해서 데이터 넣어주기
+- `img` field 추가 + `$router.params.---` 로 item 가져오기
+- `git merge` 순서 익히기
+
+---
 
 
 
@@ -47,7 +60,7 @@
 
 
 
-`2021.05.21`
+## 2021.05.21
 
 - `loaddata` 로 데이터베이스를 구성하려 했으나, 생각보다 `Foreign_Key` 문제가 계속 발생해서 
 
@@ -60,7 +73,6 @@
           const element = movies[index]
           if (element.model === 'movies.movie') {
             const data = element.fields
-            // console.log(data)
   
             axios.post('http://127.0.0.1:8000/movies/', {
               title: data.title,
@@ -79,22 +91,6 @@
                 console.log(err)
               })
           }
-          else {
-            const data2 = element.fields
-            const movie_id = data2.movie_id
-            axios.post(`http://127.0.0.1:8000/movies/${movie_id}/locations/`, {
-              address: data2.address,
-              lat: data2.lat,
-              lon: data2.lon,
-              name: data2.name,
-            })
-              .then((res)=>{
-                this.$store.dispatch('saveLocationList', res.data)
-              })
-              .catch((err)=>{
-                console.log(err)
-              })
-          }
         }      
       }
     },
@@ -105,9 +101,36 @@
 
   
 
-- `Location` 모델에 `ImageField` 필드추가.
+- ### Parameter Params 받아오기
 
   ```python
+  <button class="btn btn-primary" @click="goDetail(movie)">Go somewhere</button>
+  methods: {
+      goDetail: function (movie) {
+        this.$router.push({ name: 'MovieDetail', params: {item : movie} })
+      }
+    }
+  #================================================================================
+  <div>
+      {{ this.$route.params.item }}
+      <Location/>
+  </div>
+  
   ```
 
+- ### Git Merge 순서
+
+  - `git branch feature_A`    
+
+    - 브랜치 `feature_A` 를 만들고 변경사항을 기록한 후 , `add` , `commit`, `push`  진행
+
+  - `git pull feature_A` 
+
+    - 다른 merge 하고자 하는 곳에서 `pull` 땡기면, `conflicts` 발생하면 `conflicts` 제거 후에 
+
+      `add` , `commit` , `push` 
+
   
+
+---
+
