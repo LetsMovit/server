@@ -13,15 +13,6 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
-    path('movies/', include('movies.urls')),
-]
-
 ### swagger 관련 설정
 from django.contrib import admin
 from django.urls import path, re_path
@@ -29,6 +20,18 @@ from django.conf import settings
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+
+
+from django.contrib import admin
+from django.urls import path, include
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls')),
+    path('movies/', include('movies.urls')),
+]   +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 
 schema_view = get_schema_view( 

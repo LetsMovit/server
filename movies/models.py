@@ -28,6 +28,7 @@ class Location(models.Model):
     address = models.CharField(max_length=200)
     lat = models.FloatField()
     lon = models.FloatField()
+    # img = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, blank=True, default='media/defaultIMG.gif')
 
 
 class LocationComment(models.Model):
@@ -36,4 +37,6 @@ class LocationComment(models.Model):
     location = models.ForeignKey("movies.Location", on_delete=models.CASCADE)
     rank = models.IntegerField(default=0)
     content = models.TextField()
-    # img = models.ImageField(_(""), upload_to=None, height_field=None, width_field=None, max_length=None)
+    # img = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, blank=True, default='media/defaultIMG.gif')
+    created_at = models.DateTimeField(auto_now_add=True)
+

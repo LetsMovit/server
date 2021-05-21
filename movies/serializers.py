@@ -38,7 +38,6 @@ class MovieSerializer(serializers.ModelSerializer):
     genres = GenreSerializer(read_only=True, many=True)
     # locations = serializers.PrimaryKeyRelatedField(many=True, queryset=Location.objects.all())
 
-
     class Meta:
         model = Movie
         fields = '__all__'
@@ -50,6 +49,7 @@ class LocationSerializer(serializers.ModelSerializer):
     # M:N  Location - LikeUsers
     # like_users = UserSerializer(read_only=True, many=True)
     # location_comments = serializers.PrimaryKeyRelatedField(many=True, queryset=LocationComment.objects.all())
+    # img = serializers.ImageField(use_url=True)
 
     class Meta:
         model = Location
@@ -60,6 +60,7 @@ class LocationSerializer(serializers.ModelSerializer):
 class LocationCommentSerializer(serializers.ModelSerializer):
     # M:N 
     # like_users = UserSerializer(read_only=True, many=True)
+    # img = serializers.ImageField(use_url=True)
 
     class Meta:
         model = LocationComment

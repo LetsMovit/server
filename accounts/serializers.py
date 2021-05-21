@@ -9,10 +9,12 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
 
-        fields = ('username', 'password', 'email',)
+        fields = ('username', 'password', 'email', )
     
 
 class ProfileSerializer(serializers.ModelSerializer):
+    img = serializers.ImageField(use_url=True)
+
     class Meta:
         model = Profile
         fields = '__all__'

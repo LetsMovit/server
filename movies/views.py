@@ -93,9 +93,9 @@ class LocationCommentList(APIView):
         serializer = LocationCommentSerializer(loc_comments, many=True)
         return Response(serializer.data)
     
-    def post(self, request, loc_pk):
+    def post(self, request, loc_pk, format=None):
         location = get_object_or_404(Location, pk=loc_pk)
-        serializer = LocationCommentSerializer(data=request.data)
+        serializer = LocationCommentSerializer(data=request.data, files=request.FILES)
 
         # 임시 유저 발급
         temp_user = User()
