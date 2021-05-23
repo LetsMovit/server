@@ -15,6 +15,11 @@
 - `img` field 추가 + `$router.params.---` 로 item 가져오기
 - `git merge` 순서 익히기
 
+[2021.05.22-24](#2021.05.22-24) 
+
+- loaddata 성공
+- 
+
 ---
 
 
@@ -133,4 +138,32 @@
   
 
 ---
+
+## 2021.05.22-24
+
+- 결국 loaddata를 해결했다. 
+
+  - 가장 문제시 됐던 건, `M:N` 필드를 설정할 때 과연 로드데이터가 어떤 식으로 형성이 되는가 였다.
+
+    나는 `M:N` 이기 때문에 양쪽필드에 각 `id`  에 해당하는 값들을 list로 넣어주면 되겠다 생각했지만 
+
+    결론적으로 이야기하자면 `M:N` 필드를 선언한 모델에만 해당 `column`이름을 기준으로 `list` 형식으로 넣어주면 된다.
+
+    정말 너무 많은 시간을 소비했다 .. 하지만 해결해서 너무 뿌듯하다.
+
+- `Vue.js` 에 `CommentForm` 컴포넌트를 만들었다. 해당 컴포넌트에서는 **이미지**를 받아야하는 상황이었기에
+
+  ```javascript
+  <button class="btn btn-primary" @click.prevent="createComment">Submit</button>
+  ...
+  handleFileChange(e) {
+        // Whenever the file changes, emit the 'input' event with the file data.
+        // this.$emit('input', e.target.files[0])
+        this.image = e.target.files[0]            
+      }
+  ```
+
+  으로 처리하였다. 
+
+- 추가로 별점을 줘야하는 `rating`은 `vue-star-rating` 라이브러리를 사용해서 구현하였다.
 
