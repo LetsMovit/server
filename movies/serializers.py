@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Movie, Location, LocationComment, Genre
+from .models import Movie, Location, LocationComment
 from accounts.models import User
 # from accounts.serializers import UserSerializer
 
@@ -27,21 +27,21 @@ from accounts.models import User
 #         model = User
 #         fields = ('username', 'password', 'email', 'like_genres', 'like_locations', 'like_comments' )
 
-class GenreSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Genre
-        fields = '__all__'
+# class GenreSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Genre
+#         fields = '__all__'
 
 
 class MovieSerializer(serializers.ModelSerializer):
     # Movie - Genre =  M:N
-    genres = GenreSerializer(read_only=True, many=True)
+    # genres = GenreSerializer(read_only=True, many=True)
     # locations = serializers.PrimaryKeyRelatedField(many=True, queryset=Location.objects.all())
 
     class Meta:
         model = Movie
         fields = '__all__'
-        read_only_fields = ('genres', 'locations', )
+        read_only_fields = ('locations', )
 
 
 

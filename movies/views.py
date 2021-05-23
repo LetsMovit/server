@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 
-from .models import Movie, Location, LocationComment, Genre
+from .models import Movie, Location, LocationComment
 from accounts.models import User
 from .serializers import (
                 MovieSerializer,
                 LocationSerializer,
                 LocationCommentSerializer,
-                GenreSerializer,
+                # GenreSerializer,
             )
 
 from rest_framework.views import APIView
@@ -20,10 +20,10 @@ class GenreList(APIView):
     """
     List all Genre
     """
-    def get(self, request):
-        genres = Genre.objects.all()
-        serializer = GenreSerializer(genres, many=True)
-        return Response(serializer.data)
+    # def get(self, request):
+    #     genres = Genre.objects.all()
+    #     serializer = GenreSerializer(genres, many=True)
+    #     return Response(serializer.data)
 
 
 
@@ -62,7 +62,7 @@ class MovieList(APIView):
 
     def post(self, request):
         serializer = MovieSerializer(data=request.data)
-        print(request.data)
+        # print(request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -95,16 +95,10 @@ class LocationCommentList(APIView):
     
     def post(self, request, loc_pk, format=None):
         location = get_object_or_404(Location, pk=loc_pk)
-        serializer = LocationCommentSerializer(data=request.data, files=request.FILES)
-
-        # 임시 유저 발급
-        temp_user = User()
-        temp_user.username = 'han'
-        temp_user.password = 'han'
-        temp_user.save(self)
+        serializer = LocationCommentSerializer(data=request.data)
         
         if serializer.is_valid(raise_exception=True):
-            serializer.save(location=location, user=temp_user)
+            serializer.save(location=location, user=request.user)
             return Response(serializer.data)
 
         

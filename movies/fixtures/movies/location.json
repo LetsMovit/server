@@ -1,0 +1,386 @@
+[
+	{
+		"model": "movies.location",
+		"pk": 1,
+		"fields": {
+			"name": "메타세콰이어 나무길",
+			"address": "전남 곡성군 곡성읍 읍내리 834-2",
+			"lat": "35.2900182767676",
+			"lon": "127.301032341808",
+			"img_url": "https://t1.daumcdn.net/cfile/tistory/995F3A335B886E6B29",
+			"movie_id": "2"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 2,
+		"fields": {
+			"name": "도천마을",
+			"address": "경남 함양군 병곡면 도천리",
+			"lat": "35.5412783522215",
+			"lon": "127.695438631777",
+			"img_url": "https://lh3.googleusercontent.com/proxy/4S1Tg0v7Dh6YKjcEHNtnrwX1o1kmWgTWql4tlRDD_Ff7mAjHDt_uevbT7VuEvZie8d6RV793L9hrtPQ-WSVxOgsyhUpinl5M7gL4j_JBLPGB2XF6QA9e",
+			"movie_id": "2"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 3,
+		"fields": {
+			"name": "외지인의집",
+			"address": "전라남도 곡성군 석곡면 연반리 1485",
+			"lat": "35.1711615635964",
+			"lon": "127.222698369084",
+			"img_url": "https://img.sbs.co.kr/newsnet/etv/upload/2016/05/26/30000534529_700.jpg",
+			"movie_id": "2"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 4,
+		"fields": {
+			"name": "국제반점",
+			"address": "전북 군산시 구영6길 100",
+			"lat": "35.9882856799936",
+			"lon": "126.710878403412",
+			"img_url": "https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile26.uf.tistory.com%2Fimage%2F115DB63E4D6754841D80E0",
+			"movie_id": "12"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 5,
+		"fields": {
+			"name": "신흥동일본식가옥",
+			"address": "전라북도 군산시 구영1길 17 ",
+			"lat": "35.9864196503958",
+			"lon": "126.706120311429",
+			"img_url": "https://t1.daumcdn.net/thumb/R720x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/guest/image/XUBq5E7uBg9DzXH_N64uMMEeiao.JPG",
+			"movie_id": "12"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 6,
+		"fields": {
+			"name": "영화세트장",
+			"address": "강원도 평창군 미탄면 동막골길 122",
+			"lat": "37.314173905044",
+			"lon": "128.470931726796",
+			"img_url": "https://cdn.kado.net/news/photo/201007/472212_152759_4318.jpg",
+			"movie_id": "11"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 7,
+		"fields": {
+			"name": "이기대",
+			"address": "부산광역시 남구 용호3동 이기대공원로 105-20",
+			"lat": "35.1325023728906",
+			"lon": "129.121140717006",
+			"img_url": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F155E970C4A8CD9F736",
+			"movie_id": "5"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 8,
+		"fields": {
+			"name": "흰여울마을",
+			"address": "부산광역시 영도구 영선동4가 1043",
+			"lat": "35.0785022972416",
+			"lon": "129.045376116394",
+			"img_url": "https://blog.kakaocdn.net/dn/pBQyF/btqGGHGkA6x/iSuKWzqO28jSGpz9XkGJUK/img.jpg",
+			"movie_id": "8"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 9,
+		"fields": {
+			"name": "옛충남도청",
+			"address": "대전 중구 선화동 중앙로79번길",
+			"lat": "36.3269040851485",
+			"lon": "127.419765211436",
+			"img_url": "https://pds.joins.com//news/component/htmlphoto_mmdata/201808/20/466c595d-948e-4c83-b744-d9dca524b037.jpg",
+			"movie_id": "8"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 10,
+		"fields": {
+			"name": "꽃분이네",
+			"address": "부산광역시 중구 광복동 중구로 42",
+			"lat": "35.1015595777601",
+			"lon": "129.028313097918",
+			"img_url": "https://lh3.googleusercontent.com/proxy/CFm6BdPt3L5VZe0wPGYUpS4asVPLwE0wRePF2T0M3xiuHIOn-XvMb0QXZRC2acWszpk4rk1wzVIm9P3vBPrqQEAMd7ciP8rit6Lwvb2raxx_KmgIItG1BtWSKllgxfcxybH5pwWQ57TUDF-a8cWtNonmaO2Q3pGnP2nwkqhV-KmP1MLr91YH4HxK7UdpmrgeVcXnmYYIcnRarJ-vIGCHFj520oC5OEl3Cyy1ZjIBuejN_7Jh7lvtT7O1z4ktomffnmcuBsgpXzN54LCml1uEH5GWzstgUUwXfZj881G9TX38u0XtyB3EEku2UZrd-7xqy7cTGvIJ",
+			"movie_id": "9"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 11,
+		"fields": {
+			"name": "초장동주택",
+			"address": "부산광역시 서구 초장동 75-56",
+			"lat": "35.0950317514965",
+			"lon": "129.01812816517",
+			"img_url": "https://www.bsseogu.go.kr/upload_data/board_data/BBS_0000109/thumbnail/201501263107.jpg",
+			"movie_id": "9"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 12,
+		"fields": {
+			"name": "용두산공원",
+			"address": "부산광역시 중구 광복동2가 용두산길 37-55",
+			"lat": "35.1007940237949",
+			"lon": "129.032504580731",
+			"img_url": "http://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1230/IE001787517_STD.JPG",
+			"movie_id": "9"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 13,
+		"fields": {
+			"name": "태종대",
+			"address": "부산광역시 영도구 동삼동 전망로 24",
+			"lat": "35.0532017229047",
+			"lon": "129.087157082576",
+			"img_url": "https://t1.daumcdn.net/cfile/tistory/244879355553000D1E",
+			"movie_id": "9"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 14,
+		"fields": {
+			"name": "성주 버스 정류장",
+			"address": "경북 성주군 성주읍 경산길 15-4",
+			"lat": "35.9172603342994",
+			"lon": "128.285656540471",
+			"img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUybZCQXttv0Qe61IiKNNZarnO8KNch2qWQyBdXjMX4KUo-ynjLfYepc6MdGWO2n829VE&usqp=CAU",
+			"movie_id": "6"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 15,
+		"fields": {
+			"name": "성동카공업사",
+			"address": "전남 순천시 강남로 90",
+			"lat": "34.9534026322661",
+			"lon": "127.488913211409",
+			"img_url": "https://img5.yna.co.kr/etc/inner/KR/2017/08/09/AKR20170809099200054_01_i_P4.jpg",
+			"movie_id": "6"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 16,
+		"fields": {
+			"name": "칠백장 기사 식당",
+			"address": "부산 동래구 미남로 67",
+			"lat": "35.2002310872809",
+			"lon": "129.069878297919",
+			"img_url": "https://lh3.googleusercontent.com/proxy/4IP1_ehGz6VZevkgUI0L1-8Tvfj3XENhQ2K4if0ACeUfRGjPL7qRFeasXMcFnInqwbk4lUALr0KZQq-FMHrJ8Z22UZxzL_5ysrc5u2I7x_dbTU0PFczJj2Vi8m35qxfc_4wqgPQqhfvK3ZwLGeSTC9pLyGimUcyB6O4l--PoFXjkxuUX75Cm0dahRvnuwCrxHKiqT_uHQ6KxAQsLDbcknBdayjChHIC6MQd5Ppo8VI7dghTmeLkUuxcwEGArFIEHgFtgWtk3SW63FPXFnsL7_r5AOhQ8mz81cxqg4kjIi7ys580",
+			"movie_id": "6"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 17,
+		"fields": {
+			"name": "가나다 다실",
+			"address": "전라남도 여수시 중앙동 564 2층",
+			"lat": "34.7414664914432",
+			"lon": "127.736219684416",
+			"img_url": "https://t1.daumcdn.net/cfile/tistory/994AF53E5C02658543",
+			"movie_id": "6"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 18,
+		"fields": {
+			"name": "광주 서남대 병원",
+			"address": "동구 천변우로 415 서남대학교병원",
+			"lat": "35.1448942126423",
+			"lon": "126.914930184424",
+			"img_url": "https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/WXISHRJZMNHPNZDALID6DMWOUI.jpg",
+			"movie_id": "6"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 19,
+		"fields": {
+			"name": "박사장네 골목",
+			"address": "서울특별시 성북구 성북동 선잠로8길 24",
+			"lat": "37.6004354",
+			"lon": "126.9958382",
+			"img_url": "https://mblogthumb-phinf.pstatic.net/MjAxOTA2MDNfMTI0/MDAxNTU5NTM2NTA1NDE3.fw7EjU8ZYzx3yJelF3AuX0OfIjZcPZWzRk5PEZ1fLtog.QEatmsrEu9dSzo0Xb-4rtvE6LHzAI1aINPsMElBxWAQg.JPEG.realzzin/movie_imageR5FKMQ4B.jpg?type=w2",
+			"movie_id": "7"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 20,
+		"fields": {
+			"name": "자하문터널기생충포토촌",
+			"address": "서울특별시 종로구 부암동",
+			"lat": "37.5914204",
+			"lon": "126.9475162",
+			"img_url": "http://korean.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=29515&fileTy=MEDIA&fileNo=1",
+			"movie_id": "7"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 21,
+		"fields": {
+			"name": "돼지슈퍼",
+			"address": "서울특별시 마포구 아현동 707",
+			"lat": "37.5573338",
+			"lon": "126.9599671",
+			"img_url": "https://file.mk.co.kr/meet/neds/2020/02/image_readtop_2020_150600_15815811894086263.jpg",
+			"movie_id": "7"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 22,
+		"fields": {
+			"name": "스카이피자",
+			"address": "서울특별시 동작구 노량진2동 297-1",
+			"lat": "37.5096388",
+			"lon": "126.9348948",
+			"img_url": "https://newsimg.hankookilbo.com/cms/articlerelease/2020/02/10/202002101524783726_12.jpg",
+			"movie_id": "7"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 23,
+		"fields": {
+			"name": "아난티 클럽 서울",
+			"address": "경기도 가평군 설악면 유명로 961-34",
+			"lat": "37.6197704",
+			"lon": "127.4802537",
+			"img_url": "https://lh3.googleusercontent.com/proxy/3Qndw0iMrQqtMgDJJ9fiPcFENNFZDXxtcTwK30MuGPoArvFYjUvd-hvUUzrpER3LIFMJEIKcGw6g4CpnurPlJWe68vn6OyId6_U7FT0",
+			"movie_id": "10"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 24,
+		"fields": {
+			"name": "스테이트타워남산",
+			"address": "100, 명동, 퇴계로 중구 서울특별시",
+			"lat": "37.5602013",
+			"lon": "126.980744",
+			"img_url": "https://t1.daumcdn.net/cfile/tistory/2450AA3B56EB177931",
+			"movie_id": "10"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 25,
+		"fields": {
+			"name": "성안길",
+			"address": "충청북도 청주시 상당구 북문로1가 81-4",
+			"lat": "36.6347565",
+			"lon": "127.4841944",
+			"img_url": "https://lh3.googleusercontent.com/proxy/wtIL33n_7FEcl62fJBleQWynkm8XcXvYqPezR6xfParK8NsrKUpb9hcH6fq_SOigCX9vAjujCOUS-ght1MVkcPahFMWwPeh8kTYBzuPDAFuzvyixzekC-IGoT6bIoUEmlNCRBetjhluhZbYbU5kPtZuMQaqAwqU_ouP70VnloHigslyGSpcwSwefAcd88MNyduP7CJPC2ASlF-jCE70oPSPHiC5s26nQrHvSKBwlKCgMfVLlVrGxo6SZYbNMeC3MEp-q-pal3jWcKrQYD7lfuRiPjSXp8v8Ng3AYHJVygiMiQnMyEUNF-0igBiVvGnhRIOJ8gPtpvQqbZUUexAPhV7944uuGgH4",
+			"movie_id": "10"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 26,
+		"fields": {
+			"name": "신선대부두",
+			"address": "부산광역시 용당동",
+			"lat": "35.1094515",
+			"lon": "129.0890801",
+			"img_url": "https://blog.kakaocdn.net/dn/qhpHP/btqKPTCjPdL/n9mdLmrGQEww4PUUACOIx0/img.png",
+			"movie_id": "10"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 27,
+		"fields": {
+			"name": "차이롱",
+			"address": "서울특별시 영등포구 영등포동4가 136",
+			"lat": "37.519402",
+			"lon": "126.9013729",
+			"img_url": "https://mblogthumb-phinf.pstatic.net/MjAxOTAxMTdfMTc2/MDAxNTQ3NjkxNzIzNzA1.0hD2vX9BzwVkL8ni7iX__y1bS2fwtjd1V41iklD743og.ETgfrCg_8dDtohmU8Eo7x0HMjHFSskV8MOLjbbJypxAg.JPEG.barbie714/SE-25bcb5d0-45e8-40c7-a02a-5718ef0db6e4.jpg?type=w800",
+			"movie_id": "3"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 28,
+		"fields": {
+			"name": "가리봉시장",
+			"address": "서울특별시 구로구 가리봉동",
+			"lat": "37.4818689",
+			"lon": "126.885884",
+			"img_url": "https://www.sisajournal.com/news/photo/first/201710/img_171962_1.png",
+			"movie_id": "3"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 29,
+		"fields": {
+			"name": "리틀포레스트 촬영지",
+			"address": "경상북도 군위군 우보면 미성리 927-2",
+			"lat": "36.1797491",
+			"lon": "128.6623744",
+			"img_url": "https://img8.yna.co.kr/etc/inner/KR/2019/01/18/AKR20190118132100805_01_i_P2.jpg",
+			"movie_id": "4"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 30,
+		"fields": {
+			"name": "화본역",
+			"address": "군위군 산성면",
+			"lat": "36.1289906",
+			"lon": "128.6957793",
+			"img_url": "https://lh3.googleusercontent.com/proxy/bJkylpVCbTNeeAnT8jpdZvxTpeVTtZnJog2_S70DQYnpWZB8x5yek09VXDcadZhoa7Q4Av-p6woT1vILUDcoLHSwmh-uy4VtUQTkdd8AumnqUNhyUGgq86JTVMCkLsVSUhTVMEnNc2L6byOsSbpHHYoUx2__I07dFmiacrZJGakI4n8TsLVU4mWkoTuc5On9fozTQEqRtY3ilAB2MP3K1bMbfnmxa3uKvf-6gfBh58YQ7VVew4UM1Jg59dDUnHGk1bKdyuo9EE_b3s2yw29Mwrm23Sxqi3vsbSYMCoMY7f7FwCzsdaQunzihXVy9arfJ3Oxh45g0ow",
+			"movie_id": "4"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 31,
+		"fields": {
+			"name": "서연의집",
+			"address": "제주특별자치도 서귀포시 특별자치도, 남원읍 위미항구로 86 KR",
+			"lat": "33.2689801",
+			"lon": "126.6377953",
+			"img_url": "https://t2.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/1lcG/image/BwMqCCmPJPGzYHy5-bxSkENizNI.jpg",
+			"movie_id": "1"
+		}
+	},
+	{
+		"model": "movies.location",
+		"pk": 32,
+		"fields": {
+			"name": "구둔역",
+			"address": "경기도 양평군 지평면 구둔역길 3",
+			"lat": "37.4373437",
+			"lon": "127.6862464",
+			"img_url": "https://t1.daumcdn.net/cfile/tistory/2610793758E20DA52C",
+			"movie_id": "1"
+		}
+	}
+]

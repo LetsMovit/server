@@ -1,13 +1,9 @@
 from django.db import models
 
-# from accounts.models import User
-
 # Create your models here.
 class Genre(models.Model):
     genre_id = models.IntegerField()
     genre_name = models.CharField(max_length=50)
-    like_users = models.ManyToManyField("accounts.User", symmetrical=True, related_name='like_genres')
-
 
 class Movie(models.Model):
     title = models.CharField(max_length=100)
@@ -17,7 +13,7 @@ class Movie(models.Model):
     vote_average = models.FloatField()
     movie_id = models.IntegerField()
     # trailer_path = models.TextField()
-    genres = models.ManyToManyField("movies.Genre", symmetrical=True, related_name='movies')
+    genres = models.ManyToManyField("movies.Genre", symmetrical=False, related_name='movies')
 
 
 class Location(models.Model):
@@ -29,6 +25,7 @@ class Location(models.Model):
     lat = models.FloatField()
     lon = models.FloatField()
     # img = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, blank=True, default='media/defaultIMG.gif')
+    img_url = models.URLField(max_length=1000)
 
 
 class LocationComment(models.Model):
@@ -37,6 +34,6 @@ class LocationComment(models.Model):
     location = models.ForeignKey("movies.Location", on_delete=models.CASCADE)
     rank = models.IntegerField(default=0)
     content = models.TextField()
-    # img = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, blank=True, default='media/defaultIMG.gif')
-    created_at = models.DateTimeField(auto_now_add=True)
+    img = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, blank=True, default='media/defaultIMG.gif')
+    # created_at = models.DateTimeField(auto_now_add=True)
 
