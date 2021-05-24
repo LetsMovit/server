@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 class Genre(models.Model):
@@ -13,11 +14,11 @@ class Movie(models.Model):
     vote_average = models.FloatField()
     movie_id = models.IntegerField()
     # trailer_path = models.TextField()
-    genres = models.ManyToManyField("movies.Genre", symmetrical=False, related_name='movies')
+    genres = models.ManyToManyField("movies.Genre", related_name='movies')
 
 
 class Location(models.Model):
-    like_users = models.ManyToManyField("accounts.User", symmetrical=True, related_name='like_locations')
+    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='like_locations')
     movie = models.ForeignKey("movies.movie", on_delete=models.PROTECT,db_constraint=False, related_name='locations')
     
     name = models.CharField(max_length=100)

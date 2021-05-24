@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
-
 from .models import Movie, Location, LocationComment
 from accounts.models import User
 from .serializers import (
@@ -13,7 +12,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
-# from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+
 
 
 class GenreList(APIView):
@@ -39,6 +42,7 @@ class LocationList(APIView):
     
     def get(self, request, movie_pk):
         locations = self.get_object(movie_pk)
+        print(locations)
         serializer = LocationSerializer(locations, many=True)
         return Response(serializer.data)
     
@@ -101,4 +105,28 @@ class LocationCommentList(APIView):
             serializer.save(location=location, user=request.user)
             return Response(serializer.data)
 
-        
+@api_view(['POST'])
+@permission_classes((IsAuthenticated, ))
+@authentication_classes((JSONWebTokenAuthentication,)) 
+def location_like(request, loc_pk):
+    print(request.user)
+    location = get_object_or_404(Location, pk=loc_pk)
+    print(location.like_users.all())
+
+    # 이미 좋아요 누름
+    if request.user in location.like_users.all():
+        location.like_users.remove(request.user)
+        liked = False
+        print('좋아요취소!!!!!!!!!!!!!!!')
+    # 아직 누르지 않음
+    else:
+        location.like_users.add(request.user)
+        liked = True
+        print('추가됐어요!!!!!!!!!!!!!!!!!')
+    
+    context = {
+        'liked': liked,
+        'like_cnt': len(location.like_users.all())
+    }
+
+    return Response(context)

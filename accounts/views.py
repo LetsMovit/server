@@ -6,7 +6,8 @@ from .serializers import UserSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny
 
 
 
@@ -24,7 +25,7 @@ def signup(request):
     serializer = UserSerializer(data=request.data)
     
 	#3. validation 작업 진행 -> password도 같이 직렬화 진행
-    if serializer.is_valid(raise_exception=True):
+    if serializer.is_valid():
         user = serializer.save()
         #4. 비밀번호 해싱 후 
         user.set_password(request.data.get('password'))
