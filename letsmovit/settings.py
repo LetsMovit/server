@@ -158,3 +158,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
         ]
 }
+
+JWT_AUTH = {
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
+}

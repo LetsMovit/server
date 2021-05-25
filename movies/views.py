@@ -100,10 +100,12 @@ class LocationCommentList(APIView):
         return Response(serializer.data)
     
     def post(self, request, loc_pk, format=None):
-        location = get_object_or_404(Location, pk=loc_pk)
-        serializer = LocationCommentSerializer(data=request.data)
+        print(request)
         print(request.data)
         print(request.FILES)
+        location = get_object_or_404(Location, pk=loc_pk)
+        serializer = LocationCommentSerializer(data=request.data)
+        
         
         if serializer.is_valid():
             serializer.save(location=location, user=request.user)
