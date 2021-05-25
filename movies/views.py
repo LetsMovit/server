@@ -5,6 +5,7 @@ from .serializers import (
                 MovieSerializer,
                 LocationSerializer,
                 LocationCommentSerializer,
+                # CommentImageSerializer,
                 # GenreSerializer,
             )
 
@@ -14,6 +15,7 @@ from rest_framework import status
 from django.http import Http404
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.permissions import IsAuthenticated, AllowAny
+# from rest_framework.parsers import FileUploadParser
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 
@@ -35,7 +37,6 @@ class LocationListAll(APIView):
         locations = get_list_or_404(Location)
         serializer = LocationSerializer(locations, many=True)
         return Response(serializer.data)
-
 
 
 class LocationList(APIView):
@@ -62,7 +63,6 @@ class LocationList(APIView):
             serializer.save(movie=movie)
             return Response(serializer.data)
 
-
 class MovieList(APIView):
     """
     Get List
@@ -79,7 +79,6 @@ class MovieList(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
 
-
 class MovieDetail(APIView):
     """
     Get Particular Movie
@@ -89,95 +88,72 @@ class MovieDetail(APIView):
         serializer = MovieSerializer(movie)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-
 class LocationCommentList(APIView):
+    authentication_classes = (JSONWebTokenAuthentication,)
     """
     Get Comment with Location, Create Comment on Location
     """
-    def get_object(self, loc_pk):
-        try:
-            return LocationComment.objects.filter(location_id=loc_pk)
-        except LocationComment.DoesNotExist:
-            raise Http404
-
     def get(self, request, loc_pk):
-        loc_comments = self.get_object(loc_pk)
+        location = Location.objects.filter(id=loc_pk)
+        loc_comments = location.comment_set.all()
         serializer = LocationCommentSerializer(loc_comments, many=True)
         return Response(serializer.data)
     
     def post(self, request, loc_pk, format=None):
         location = get_object_or_404(Location, pk=loc_pk)
         serializer = LocationCommentSerializer(data=request.data)
+        print(request.data)
+        print(request.FILES)
         
-        if serializer.is_valid(raise_exception=True):
+        if serializer.is_valid():
             serializer.save(location=location, user=request.user)
             return Response(serializer.data)
 
 # @api_view(['POST'])
 # @permission_classes((IsAuthenticated,))
-# @authentication_classes((JSONWebTokenAuthentication,)) 
 class LocationLikeList(APIView):
+    authentication_classes = (JSONWebTokenAuthentication,)
+
     """
     Get Like Status, count, Post add or remove Like
     """
-    def get_object(self, loc_pk):
-        try:
-            return Location.objects.filter(id=loc_pk)
-        except Location.DoesNotExist:
-            return Http404
-
-    def isClicked(self):
-        location = self.get_object(loc_pk)
-        if request.user in location.like_users.all():
-            return True
-        else:
-            return False
-    
     def get(self, request, loc_pk):
-        location = self.get_object(loc_pk)
+        location = get_object_or_404(Location, pk=loc_pk)
+
+        if request.user in location.like_users.all():
+            isClicked = True
+        else:
+            isClicked = False
         
         context = {
-            'clicked': self.isClicked(),
-            'like_cnt': len(location.like_user.all())
+            'isClicked': isClicked,
+            'like_cnt': len(location.like_users.all())
         }
         return Response(context)
 
     def post(self, request, loc_pk):
-        location = self.get_object(loc_pk)
-
-        # 좋아요 누른상태라면
-        if self.isClicked():
+        location = get_object_or_404(Location, pk=loc_pk)
+        print(location)
+        
+        if request.user in location.like_users.all():
+            print(1111111111111111111)
             location.like_users.remove(request.user)
+            isClicked = False
         else:
+            print(2222222222222222222)
             location.like_users.add(request.user)
+            isClicked = True
         
         context = {
-            'clicked': self.isClicked(),
+            'isClicked': isClicked,
             'like_cnt': len(location.like_users.all())
         }
         return Response(context)
 
     
+# class CommentImageList(APIView):
+#     parser_classes = [FileUploadParser]
 
-# def location_like(request, loc_pk):
-#     print(request.user)
-#     location = get_object_or_404(Location, pk=loc_pk)
-#     print(location.like_users.all())
-
-#     # 이미 좋아요 누름
-#     if request.user in location.like_users.all():
-#         location.like_users.remove(request.user)
-#         liked = False
-#         print('좋아요취소!!!!!!!!!!!!!!!')
-#     # 아직 누르지 않음
-#     else:
-#         location.like_users.add(request.user)
-#         liked = True
-#         print('추가됐어요!!!!!!!!!!!!!!!!!')
-    
-#     context = {
-#         'liked': liked,
-#         'like_cnt': len(location.like_users.all())
-#     }
-
-    # return Response(context)
+#     def post(self, request, filename, format=None):
+#         image = request.data['image']
+        

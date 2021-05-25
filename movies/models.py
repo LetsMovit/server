@@ -30,11 +30,14 @@ class Location(models.Model):
 
 
 class LocationComment(models.Model):
-    user = models.ForeignKey("accounts.User", on_delete=models.CASCADE, related_name='comments')
-    like_users = models.ManyToManyField("accounts.User", symmetrical=True, related_name='like_comments')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='comments')
+    like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, symmetrical=True, related_name='like_comments')
     location = models.ForeignKey("movies.Location", on_delete=models.CASCADE)
     rank = models.IntegerField(default=0)
     content = models.TextField()
-    img = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, blank=True, default='media/defaultIMG.gif')
+    image = models.ImageField(blank=True, null=True, upload_to="comments")
     # created_at = models.DateTimeField(auto_now_add=True)
 
+# class CommentImage(models.Model):
+#     location = models.OneToOneField("movies.LocationComment", on_delete=models.CASCADE, related_name='comment_img')
+#     image = models.ImageField(upload_to='uploads', blank=True)
