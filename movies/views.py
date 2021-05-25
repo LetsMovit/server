@@ -12,11 +12,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import Http404
-from rest_framework.decorators import api_view
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
-
 
 
 class GenreList(APIView):
@@ -27,6 +25,16 @@ class GenreList(APIView):
     #     genres = Genre.objects.all()
     #     serializer = GenreSerializer(genres, many=True)
     #     return Response(serializer.data)
+
+
+class LocationListAll(APIView):
+    """
+    Get all Locations
+    """
+    def get(self, *args):
+        locations = get_list_or_404(Location)
+        serializer = LocationSerializer(locations, many=True)
+        return Response(serializer.data)
 
 
 
@@ -105,28 +113,71 @@ class LocationCommentList(APIView):
             serializer.save(location=location, user=request.user)
             return Response(serializer.data)
 
-@api_view(['POST'])
-@permission_classes((IsAuthenticated, ))
-@authentication_classes((JSONWebTokenAuthentication,)) 
-def location_like(request, loc_pk):
-    print(request.user)
-    location = get_object_or_404(Location, pk=loc_pk)
-    print(location.like_users.all())
+# @api_view(['POST'])
+# @permission_classes((IsAuthenticated,))
+# @authentication_classes((JSONWebTokenAuthentication,)) 
+class LocationLikeList(APIView):
+    """
+    Get Like Status, count, Post add or remove Like
+    """
+    def get_object(self, loc_pk):
+        try:
+            return Location.objects.filter(id=loc_pk)
+        except Location.DoesNotExist:
+            return Http404
 
-    # 이미 좋아요 누름
-    if request.user in location.like_users.all():
-        location.like_users.remove(request.user)
-        liked = False
-        print('좋아요취소!!!!!!!!!!!!!!!')
-    # 아직 누르지 않음
-    else:
-        location.like_users.add(request.user)
-        liked = True
-        print('추가됐어요!!!!!!!!!!!!!!!!!')
+    def isClicked(self):
+        location = self.get_object(loc_pk)
+        if request.user in location.like_users.all():
+            return True
+        else:
+            return False
     
-    context = {
-        'liked': liked,
-        'like_cnt': len(location.like_users.all())
-    }
+    def get(self, request, loc_pk):
+        location = self.get_object(loc_pk)
+        
+        context = {
+            'clicked': self.isClicked(),
+            'like_cnt': len(location.like_user.all())
+        }
+        return Response(context)
 
-    return Response(context)
+    def post(self, request, loc_pk):
+        location = self.get_object(loc_pk)
+
+        # 좋아요 누른상태라면
+        if self.isClicked():
+            location.like_users.remove(request.user)
+        else:
+            location.like_users.add(request.user)
+        
+        context = {
+            'clicked': self.isClicked(),
+            'like_cnt': len(location.like_users.all())
+        }
+        return Response(context)
+
+    
+
+# def location_like(request, loc_pk):
+#     print(request.user)
+#     location = get_object_or_404(Location, pk=loc_pk)
+#     print(location.like_users.all())
+
+#     # 이미 좋아요 누름
+#     if request.user in location.like_users.all():
+#         location.like_users.remove(request.user)
+#         liked = False
+#         print('좋아요취소!!!!!!!!!!!!!!!')
+#     # 아직 누르지 않음
+#     else:
+#         location.like_users.add(request.user)
+#         liked = True
+#         print('추가됐어요!!!!!!!!!!!!!!!!!')
+    
+#     context = {
+#         'liked': liked,
+#         'like_cnt': len(location.like_users.all())
+#     }
+
+    # return Response(context)
