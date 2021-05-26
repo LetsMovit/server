@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from .models import Movie, Location, LocationComment
 from accounts.models import User
+from accounts.serializers import UserSerializer
 from .serializers import (
                 MovieSerializer,
                 LocationSerializer,
@@ -94,8 +95,13 @@ class LocationCommentList(APIView):
     Get Comment with Location, Create Comment on Location
     """
     def get(self, request, loc_pk):
-        loc_comments = LocationComment.objects.filter(location_id=loc_pk)
+        loc_comments = LocationComment.objects.filter(location_id=loc_pk).prefetch_related('user')
+        # location_id=loc_pk
+        # users = []
+        # for comment in loc_comments:
+        #     users.append(UserSerializer(data=User.objects.filter(username=comment.user)))
         serializer = LocationCommentSerializer(loc_comments, many=True)
+
         return Response(serializer.data)
     
     def post(self, request, loc_pk, format=None):
