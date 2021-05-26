@@ -64,5 +64,5 @@ class LocationCommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = LocationComment
-        fields = ('image', 'rank', 'content', )
+        fields = ('image', 'rank', 'content', 'title' )
         read_only_fields = ('location', 'like_users', 'user', )

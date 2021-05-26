@@ -34,6 +34,7 @@ class LocationComment(models.Model):
     like_users = models.ManyToManyField(settings.AUTH_USER_MODEL, symmetrical=True, related_name='like_comments')
     location = models.ForeignKey("movies.Location", on_delete=models.CASCADE)
     rank = models.IntegerField(default=0)
+    title = models.CharField(max_length=200)
     content = models.TextField()
     image = models.ImageField(blank=True, null=True, upload_to="comments")
     # created_at = models.DateTimeField(auto_now_add=True)
