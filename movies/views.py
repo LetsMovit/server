@@ -94,8 +94,7 @@ class LocationCommentList(APIView):
     Get Comment with Location, Create Comment on Location
     """
     def get(self, request, loc_pk):
-        location = Location.objects.filter(id=loc_pk)
-        loc_comments = location.comment_set.all()
+        loc_comments = LocationComment.objects.filter(location_id=loc_pk)
         serializer = LocationCommentSerializer(loc_comments, many=True)
         return Response(serializer.data)
     
