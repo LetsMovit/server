@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import User, Profile
 from .serializers import UserSerializer, ProfileSerializer
@@ -8,6 +8,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
+
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 
 
@@ -43,3 +45,27 @@ def signup(request):
 
     # password는 직렬화 과정에는 포함 되지만 → 표현(response)할 때는 나타나지 않는다.
     return Response(user_serializer.data, status=status.HTTP_201_CREATED)
+
+
+
+class ProfileList(APIView):
+    authentication_classes = (JSONWebTokenAuthentication,)
+
+    """
+    GET or UPDATE profile
+    """
+    def get(self, request, username):
+        print(username)
+        user = get_object_or_404(User, username=username)
+        profile = get_object_or_404(Profile, user_id=user.id)
+        print(profile)
+        serializer = ProfileSerializer(profile)
+        return Response(serializer.data)
+
+    def put(self, request, username):
+        profile = get_object_or_404(Profile, pk=pk)
+        serializer = ProfileSerializer(profile, data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)

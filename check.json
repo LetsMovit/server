@@ -3,23 +3,271 @@
     "model": "accounts.user",
     "pk": 1,
     "fields": {
-      "password": "pbkdf2_sha256$260000$pbidN5TTjaxW6uEC5Ayciw$ZR8fjsiru7FMlV/cRijgnaolpofrUCmzepYw/OVWU5M=",
-      "last_login": "2021-05-23T15:33:17.095Z",
-      "is_superuser": true,
+      "password": "pbkdf2_sha256$260000$1ZATJG5u3SuebDCD8sytZg$HjpjFKvQmdS3u3HqGW0I/LCHxyUliMSK31z+lOVguJc=",
+      "last_login": null,
+      "is_superuser": false,
       "username": "admin",
+      "email": "gkstkdwls1994@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2021-05-26T08:28:58.285Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$vO4NeQXFQXfQlT9acAOlqL$5leiGbpgi9TUL+O0m//BPHTDYJaSS64G5L7xDJylcOU=",
+      "last_login": "2021-05-26T14:49:12.062Z",
+      "is_superuser": true,
+      "username": "han",
       "email": "",
       "is_staff": true,
       "is_active": true,
-      "date_joined": "2021-05-23T15:32:57.161Z",
+      "date_joined": "2021-05-26T14:48:53.571Z",
       "groups": [],
       "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "image": "defaultIMG.gif"
     }
   },
   {
     "model": "movies.genre",
     "pk": 1,
     "fields": {
-      "genre_id": 1,
+      "genre_id": 35,
+      "genre_name": "�ڹ̵�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 2,
+    "fields": {
+      "genre_id": 10749,
+      "genre_name": "�θǽ�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 3,
+    "fields": {
+      "genre_id": 27,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 4,
+    "fields": {
+      "genre_id": 9648,
+      "genre_name": "�̽��͸�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 5,
+    "fields": {
+      "genre_id": 80,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 6,
+    "fields": {
+      "genre_id": 28,
+      "genre_name": "�׼�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 7,
+    "fields": {
+      "genre_id": 18,
+      "genre_name": "���"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 8,
+    "fields": {
+      "genre_id": 28,
+      "genre_name": "�׼�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 9,
+    "fields": {
+      "genre_id": 12,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 10,
+    "fields": {
+      "genre_id": 18,
+      "genre_name": "���"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 11,
+    "fields": {
+      "genre_id": 53,
+      "genre_name": "������"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 12,
+    "fields": {
+      "genre_id": 18,
+      "genre_name": "���"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 13,
+    "fields": {
+      "genre_id": 36,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 14,
+    "fields": {
+      "genre_id": 28,
+      "genre_name": "�׼�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 15,
+    "fields": {
+      "genre_id": 35,
+      "genre_name": "�ڹ̵�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 16,
+    "fields": {
+      "genre_id": 53,
+      "genre_name": "������"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 17,
+    "fields": {
+      "genre_id": 18,
+      "genre_name": "���"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 18,
+    "fields": {
+      "genre_id": 36,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 19,
+    "fields": {
+      "genre_id": 18,
+      "genre_name": "���"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 20,
+    "fields": {
+      "genre_id": 18,
+      "genre_name": "���"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 21,
+    "fields": {
+      "genre_id": 28,
+      "genre_name": "�׼�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 22,
+    "fields": {
+      "genre_id": 35,
+      "genre_name": "�ڹ̵�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 23,
+    "fields": {
+      "genre_id": 80,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 24,
+    "fields": {
+      "genre_id": 10752,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 25,
+    "fields": {
+      "genre_id": 35,
+      "genre_name": "�ڹ̵�"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 26,
+    "fields": {
+      "genre_id": 18,
+      "genre_name": "���"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 27,
+    "fields": {
+      "genre_id": 36,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 28,
+    "fields": {
+      "genre_id": 80,
+      "genre_name": "����"
+    }
+  },
+  {
+    "model": "movies.genre",
+    "pk": 29,
+    "fields": {
+      "genre_id": 35,
       "genre_name": "�ڹ̵�"
     }
   },
@@ -33,9 +281,7 @@
       "backdrop_path": "https://image.tmdb.org/t/p/w500/mhYkTN7wcb53nzEerIt0RSojLCw.jpg",
       "vote_average": 7.2,
       "movie_id": 107235,
-      "genres": [
-        1
-      ]
+      "genres": []
     }
   },
   {
@@ -182,29 +428,458 @@
     }
   },
   {
-    "model": "admin.logentry",
+    "model": "movies.location",
     "pk": 1,
     "fields": {
-      "action_time": "2021-05-23T15:34:46.373Z",
-      "user": 1,
-      "content_type": 6,
-      "object_id": "1",
-      "object_repr": "Genre object (1)",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+      "movie": 2,
+      "name": "��Ÿ�����̾� ������",
+      "address": "���� ��� ��� ������ 834-2",
+      "lat": 35.2900182767676,
+      "lon": 127.301032341808,
+      "img_url": "https://t1.daumcdn.net/cfile/tistory/995F3A335B886E6B29",
+      "like_users": []
     }
   },
   {
-    "model": "admin.logentry",
+    "model": "movies.location",
     "pk": 2,
     "fields": {
-      "action_time": "2021-05-23T15:35:05.237Z",
+      "movie": 2,
+      "name": "��õ����",
+      "address": "�泲 �Ծ籺 ����� ��õ��",
+      "lat": 35.5412783522215,
+      "lon": 127.695438631777,
+      "img_url": "https://lh3.googleusercontent.com/proxy/4S1Tg0v7Dh6YKjcEHNtnrwX1o1kmWgTWql4tlRDD_Ff7mAjHDt_uevbT7VuEvZie8d6RV793L9hrtPQ-WSVxOgsyhUpinl5M7gL4j_JBLPGB2XF6QA9e",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 3,
+    "fields": {
+      "movie": 2,
+      "name": "����������",
+      "address": "���󳲵� ��� ����� ���ݸ� 1485",
+      "lat": 35.1711615635964,
+      "lon": 127.222698369084,
+      "img_url": "https://img.sbs.co.kr/newsnet/etv/upload/2016/05/26/30000534529_700.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 4,
+    "fields": {
+      "movie": 12,
+      "name": "��������",
+      "address": "���� ����� ����6�� 100",
+      "lat": 35.9882856799936,
+      "lon": 126.710878403412,
+      "img_url": "https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile26.uf.tistory.com%2Fimage%2F115DB63E4D6754841D80E0",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 5,
+    "fields": {
+      "movie": 12,
+      "name": "���ﵿ�Ϻ��İ���",
+      "address": "����ϵ� ����� ����1�� 17 ",
+      "lat": 35.9864196503958,
+      "lon": 126.706120311429,
+      "img_url": "https://t1.daumcdn.net/thumb/R720x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/guest/image/XUBq5E7uBg9DzXH_N64uMMEeiao.JPG",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 6,
+    "fields": {
+      "movie": 11,
+      "name": "��ȭ��Ʈ��",
+      "address": "������ ��â�� ��ź�� ������� 122",
+      "lat": 37.314173905044,
+      "lon": 128.470931726796,
+      "img_url": "https://cdn.kado.net/news/photo/201007/472212_152759_4318.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 7,
+    "fields": {
+      "movie": 5,
+      "name": "�̱��",
+      "address": "�λ걤���� ���� ��ȣ3�� �̱������� 105-20",
+      "lat": 35.1325023728906,
+      "lon": 129.121140717006,
+      "img_url": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F155E970C4A8CD9F736",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 8,
+    "fields": {
+      "movie": 8,
+      "name": "�򿩿︶��",
+      "address": "�λ걤���� ������ ������4�� 1043",
+      "lat": 35.0785022972416,
+      "lon": 129.045376116394,
+      "img_url": "https://blog.kakaocdn.net/dn/pBQyF/btqGGHGkA6x/iSuKWzqO28jSGpz9XkGJUK/img.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 9,
+    "fields": {
+      "movie": 8,
+      "name": "���泲��û",
+      "address": "���� �߱� ��ȭ�� �߾ӷ�79����",
+      "lat": 36.3269040851485,
+      "lon": 127.419765211436,
+      "img_url": "https://pds.joins.com//news/component/htmlphoto_mmdata/201808/20/466c595d-948e-4c83-b744-d9dca524b037.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 10,
+    "fields": {
+      "movie": 9,
+      "name": "�ɺ��̳�",
+      "address": "�λ걤���� �߱� ������ �߱��� 42",
+      "lat": 35.1015595777601,
+      "lon": 129.028313097918,
+      "img_url": "https://lh3.googleusercontent.com/proxy/CFm6BdPt3L5VZe0wPGYUpS4asVPLwE0wRePF2T0M3xiuHIOn-XvMb0QXZRC2acWszpk4rk1wzVIm9P3vBPrqQEAMd7ciP8rit6Lwvb2raxx_KmgIItG1BtWSKllgxfcxybH5pwWQ57TUDF-a8cWtNonmaO2Q3pGnP2nwkqhV-KmP1MLr91YH4HxK7UdpmrgeVcXnmYYIcnRarJ-vIGCHFj520oC5OEl3Cyy1ZjIBuejN_7Jh7lvtT7O1z4ktomffnmcuBsgpXzN54LCml1uEH5GWzstgUUwXfZj881G9TX38u0XtyB3EEku2UZrd-7xqy7cTGvIJ",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 11,
+    "fields": {
+      "movie": 9,
+      "name": "���嵿����",
+      "address": "�λ걤���� ���� ���嵿 75-56",
+      "lat": 35.0950317514965,
+      "lon": 129.01812816517,
+      "img_url": "https://www.bsseogu.go.kr/upload_data/board_data/BBS_0000109/thumbnail/201501263107.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 12,
+    "fields": {
+      "movie": 9,
+      "name": "��λ����",
+      "address": "�λ걤���� �߱� ������2�� ��λ�� 37-55",
+      "lat": 35.1007940237949,
+      "lon": 129.032504580731,
+      "img_url": "http://ojsfile.ohmynews.com/STD_IMG_FILE/2014/1230/IE001787517_STD.JPG",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 13,
+    "fields": {
+      "movie": 9,
+      "name": "������",
+      "address": "�λ걤���� ������ ���ﵿ ������ 24",
+      "lat": 35.0532017229047,
+      "lon": 129.087157082576,
+      "img_url": "https://t1.daumcdn.net/cfile/tistory/244879355553000D1E",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 14,
+    "fields": {
+      "movie": 6,
+      "name": "���� ���� ������",
+      "address": "��� ���ֱ� ������ ���� 15-4",
+      "lat": 35.9172603342994,
+      "lon": 128.285656540471,
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUybZCQXttv0Qe61IiKNNZarnO8KNch2qWQyBdXjMX4KUo-ynjLfYepc6MdGWO2n829VE&usqp=CAU",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 15,
+    "fields": {
+      "movie": 6,
+      "name": "����ī������",
+      "address": "���� ��õ�� ������ 90",
+      "lat": 34.9534026322661,
+      "lon": 127.488913211409,
+      "img_url": "https://img5.yna.co.kr/etc/inner/KR/2017/08/09/AKR20170809099200054_01_i_P4.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 16,
+    "fields": {
+      "movie": 6,
+      "name": "ĥ���� ��� �Ĵ�",
+      "address": "�λ� ������ �̳��� 67",
+      "lat": 35.2002310872809,
+      "lon": 129.069878297919,
+      "img_url": "https://lh3.googleusercontent.com/proxy/4IP1_ehGz6VZevkgUI0L1-8Tvfj3XENhQ2K4if0ACeUfRGjPL7qRFeasXMcFnInqwbk4lUALr0KZQq-FMHrJ8Z22UZxzL_5ysrc5u2I7x_dbTU0PFczJj2Vi8m35qxfc_4wqgPQqhfvK3ZwLGeSTC9pLyGimUcyB6O4l--PoFXjkxuUX75Cm0dahRvnuwCrxHKiqT_uHQ6KxAQsLDbcknBdayjChHIC6MQd5Ppo8VI7dghTmeLkUuxcwEGArFIEHgFtgWtk3SW63FPXFnsL7_r5AOhQ8mz81cxqg4kjIi7ys580",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 17,
+    "fields": {
+      "movie": 6,
+      "name": "������ �ٽ�",
+      "address": "���󳲵� ������ �߾ӵ� 564 2��",
+      "lat": 34.7414664914432,
+      "lon": 127.736219684416,
+      "img_url": "https://t1.daumcdn.net/cfile/tistory/994AF53E5C02658543",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 18,
+    "fields": {
+      "movie": 6,
+      "name": "���� ������ ����",
+      "address": "���� õ����� 415 �������б�����",
+      "lat": 35.1448942126423,
+      "lon": 126.914930184424,
+      "img_url": "https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/WXISHRJZMNHPNZDALID6DMWOUI.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 19,
+    "fields": {
+      "movie": 7,
+      "name": "�ڻ���� ���",
+      "address": "����Ư���� ���ϱ� ���ϵ� �����8�� 24",
+      "lat": 37.6004354,
+      "lon": 126.9958382,
+      "img_url": "https://mblogthumb-phinf.pstatic.net/MjAxOTA2MDNfMTI0/MDAxNTU5NTM2NTA1NDE3.fw7EjU8ZYzx3yJelF3AuX0OfIjZcPZWzRk5PEZ1fLtog.QEatmsrEu9dSzo0Xb-4rtvE6LHzAI1aINPsMElBxWAQg.JPEG.realzzin/movie_imageR5FKMQ4B.jpg?type=w2",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 20,
+    "fields": {
+      "movie": 7,
+      "name": "���Ϲ��ͳα����������",
+      "address": "����Ư���� ���α� �ξϵ�",
+      "lat": 37.5914204,
+      "lon": 126.9475162,
+      "img_url": "http://korean.visitseoul.net/comm/getImage?srvcId=MEDIA&parentSn=29515&fileTy=MEDIA&fileNo=1",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 21,
+    "fields": {
+      "movie": 7,
+      "name": "��������",
+      "address": "����Ư���� ������ ������ 707",
+      "lat": 37.5573338,
+      "lon": 126.9599671,
+      "img_url": "https://file.mk.co.kr/meet/neds/2020/02/image_readtop_2020_150600_15815811894086263.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 22,
+    "fields": {
+      "movie": 7,
+      "name": "��ī������",
+      "address": "����Ư���� ���۱� �뷮��2�� 297-1",
+      "lat": 37.5096388,
+      "lon": 126.9348948,
+      "img_url": "https://newsimg.hankookilbo.com/cms/articlerelease/2020/02/10/202002101524783726_12.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 23,
+    "fields": {
+      "movie": 10,
+      "name": "�Ƴ�Ƽ Ŭ�� ����",
+      "address": "��⵵ ���� ���Ǹ� ������ 961-34",
+      "lat": 37.6197704,
+      "lon": 127.4802537,
+      "img_url": "https://lh3.googleusercontent.com/proxy/3Qndw0iMrQqtMgDJJ9fiPcFENNFZDXxtcTwK30MuGPoArvFYjUvd-hvUUzrpER3LIFMJEIKcGw6g4CpnurPlJWe68vn6OyId6_U7FT0",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 24,
+    "fields": {
+      "movie": 10,
+      "name": "������ƮŸ������",
+      "address": "100, ����, ���� �߱� ����Ư����",
+      "lat": 37.5602013,
+      "lon": 126.980744,
+      "img_url": "https://t1.daumcdn.net/cfile/tistory/2450AA3B56EB177931",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 25,
+    "fields": {
+      "movie": 10,
+      "name": "���ȱ�",
+      "address": "��û�ϵ� û�ֽ� ��籸 �Ϲ���1�� 81-4",
+      "lat": 36.6347565,
+      "lon": 127.4841944,
+      "img_url": "https://lh3.googleusercontent.com/proxy/wtIL33n_7FEcl62fJBleQWynkm8XcXvYqPezR6xfParK8NsrKUpb9hcH6fq_SOigCX9vAjujCOUS-ght1MVkcPahFMWwPeh8kTYBzuPDAFuzvyixzekC-IGoT6bIoUEmlNCRBetjhluhZbYbU5kPtZuMQaqAwqU_ouP70VnloHigslyGSpcwSwefAcd88MNyduP7CJPC2ASlF-jCE70oPSPHiC5s26nQrHvSKBwlKCgMfVLlVrGxo6SZYbNMeC3MEp-q-pal3jWcKrQYD7lfuRiPjSXp8v8Ng3AYHJVygiMiQnMyEUNF-0igBiVvGnhRIOJ8gPtpvQqbZUUexAPhV7944uuGgH4",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 26,
+    "fields": {
+      "movie": 10,
+      "name": "�ż���ε�",
+      "address": "�λ걤���� ��絿",
+      "lat": 35.1094515,
+      "lon": 129.0890801,
+      "img_url": "https://blog.kakaocdn.net/dn/qhpHP/btqKPTCjPdL/n9mdLmrGQEww4PUUACOIx0/img.png",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 27,
+    "fields": {
+      "movie": 3,
+      "name": "���̷�",
+      "address": "����Ư���� �������� ��������4�� 136",
+      "lat": 37.519402,
+      "lon": 126.9013729,
+      "img_url": "https://mblogthumb-phinf.pstatic.net/MjAxOTAxMTdfMTc2/MDAxNTQ3NjkxNzIzNzA1.0hD2vX9BzwVkL8ni7iX__y1bS2fwtjd1V41iklD743og.ETgfrCg_8dDtohmU8Eo7x0HMjHFSskV8MOLjbbJypxAg.JPEG.barbie714/SE-25bcb5d0-45e8-40c7-a02a-5718ef0db6e4.jpg?type=w800",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 28,
+    "fields": {
+      "movie": 3,
+      "name": "����������",
+      "address": "����Ư���� ���α� ��������",
+      "lat": 37.4818689,
+      "lon": 126.885884,
+      "img_url": "https://www.sisajournal.com/news/photo/first/201710/img_171962_1.png",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 29,
+    "fields": {
+      "movie": 4,
+      "name": "��Ʋ������Ʈ �Կ���",
+      "address": "���ϵ� ������ �캸�� �̼��� 927-2",
+      "lat": 36.1797491,
+      "lon": 128.6623744,
+      "img_url": "https://img8.yna.co.kr/etc/inner/KR/2019/01/18/AKR20190118132100805_01_i_P2.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 30,
+    "fields": {
+      "movie": 4,
+      "name": "ȭ����",
+      "address": "������ �꼺��",
+      "lat": 36.1289906,
+      "lon": 128.6957793,
+      "img_url": "https://lh3.googleusercontent.com/proxy/bJkylpVCbTNeeAnT8jpdZvxTpeVTtZnJog2_S70DQYnpWZB8x5yek09VXDcadZhoa7Q4Av-p6woT1vILUDcoLHSwmh-uy4VtUQTkdd8AumnqUNhyUGgq86JTVMCkLsVSUhTVMEnNc2L6byOsSbpHHYoUx2__I07dFmiacrZJGakI4n8TsLVU4mWkoTuc5On9fozTQEqRtY3ilAB2MP3K1bMbfnmxa3uKvf-6gfBh58YQ7VVew4UM1Jg59dDUnHGk1bKdyuo9EE_b3s2yw29Mwrm23Sxqi3vsbSYMCoMY7f7FwCzsdaQunzihXVy9arfJ3Oxh45g0ow",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 31,
+    "fields": {
+      "movie": 1,
+      "name": "��������",
+      "address": "����Ư����ġ�� �������� Ư����ġ��, ������ �����ױ��� 86 KR",
+      "lat": 33.2689801,
+      "lon": 126.6377953,
+      "img_url": "https://t2.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/1lcG/image/BwMqCCmPJPGzYHy5-bxSkENizNI.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.location",
+    "pk": 32,
+    "fields": {
+      "movie": 1,
+      "name": "���п�",
+      "address": "��⵵ ���� ����� ���п��� 3",
+      "lat": 37.4373437,
+      "lon": 127.6862464,
+      "img_url": "https://t1.daumcdn.net/cfile/tistory/2610793758E20DA52C",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.locationcomment",
+    "pk": 1,
+    "fields": {
       "user": 1,
-      "content_type": 4,
-      "object_id": "1",
-      "object_repr": "Movie object (1)",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Genres\"]}}]"
+      "location": 31,
+      "rank": 4,
+      "title": "��������",
+      "content": "����",
+      "image": "comments/��������_dEbeHBX.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.locationcomment",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "location": 31,
+      "rank": 4,
+      "title": "aaaaaaaaaaaasdfds",
+      "content": "sdfdsfsd",
+      "image": "comments/���泲��û.jpg",
+      "like_users": []
+    }
+  },
+  {
+    "model": "movies.locationcomment",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "location": 32,
+      "rank": 3,
+      "title": "��������������",
+      "content": "����������",
+      "image": "comments/���п�.jpg",
+      "like_users": []
     }
   },
   {
@@ -283,144 +958,144 @@
     "model": "auth.permission",
     "pk": 9,
     "fields": {
-      "name": "Can add location",
+      "name": "Can add genre",
       "content_type": 3,
-      "codename": "add_location"
+      "codename": "add_genre"
     }
   },
   {
     "model": "auth.permission",
     "pk": 10,
     "fields": {
-      "name": "Can change location",
+      "name": "Can change genre",
       "content_type": 3,
-      "codename": "change_location"
+      "codename": "change_genre"
     }
   },
   {
     "model": "auth.permission",
     "pk": 11,
     "fields": {
-      "name": "Can delete location",
+      "name": "Can delete genre",
       "content_type": 3,
-      "codename": "delete_location"
+      "codename": "delete_genre"
     }
   },
   {
     "model": "auth.permission",
     "pk": 12,
     "fields": {
-      "name": "Can view location",
+      "name": "Can view genre",
       "content_type": 3,
-      "codename": "view_location"
+      "codename": "view_genre"
     }
   },
   {
     "model": "auth.permission",
     "pk": 13,
     "fields": {
-      "name": "Can add movie",
+      "name": "Can add location",
       "content_type": 4,
-      "codename": "add_movie"
+      "codename": "add_location"
     }
   },
   {
     "model": "auth.permission",
     "pk": 14,
     "fields": {
-      "name": "Can change movie",
+      "name": "Can change location",
       "content_type": 4,
-      "codename": "change_movie"
+      "codename": "change_location"
     }
   },
   {
     "model": "auth.permission",
     "pk": 15,
     "fields": {
-      "name": "Can delete movie",
+      "name": "Can delete location",
       "content_type": 4,
-      "codename": "delete_movie"
+      "codename": "delete_location"
     }
   },
   {
     "model": "auth.permission",
     "pk": 16,
     "fields": {
-      "name": "Can view movie",
+      "name": "Can view location",
       "content_type": 4,
-      "codename": "view_movie"
+      "codename": "view_location"
     }
   },
   {
     "model": "auth.permission",
     "pk": 17,
     "fields": {
-      "name": "Can add location comment",
+      "name": "Can add movie",
       "content_type": 5,
-      "codename": "add_locationcomment"
+      "codename": "add_movie"
     }
   },
   {
     "model": "auth.permission",
     "pk": 18,
     "fields": {
-      "name": "Can change location comment",
+      "name": "Can change movie",
       "content_type": 5,
-      "codename": "change_locationcomment"
+      "codename": "change_movie"
     }
   },
   {
     "model": "auth.permission",
     "pk": 19,
     "fields": {
-      "name": "Can delete location comment",
+      "name": "Can delete movie",
       "content_type": 5,
-      "codename": "delete_locationcomment"
+      "codename": "delete_movie"
     }
   },
   {
     "model": "auth.permission",
     "pk": 20,
     "fields": {
-      "name": "Can view location comment",
+      "name": "Can view movie",
       "content_type": 5,
-      "codename": "view_locationcomment"
+      "codename": "view_movie"
     }
   },
   {
     "model": "auth.permission",
     "pk": 21,
     "fields": {
-      "name": "Can add genre",
+      "name": "Can add location comment",
       "content_type": 6,
-      "codename": "add_genre"
+      "codename": "add_locationcomment"
     }
   },
   {
     "model": "auth.permission",
     "pk": 22,
     "fields": {
-      "name": "Can change genre",
+      "name": "Can change location comment",
       "content_type": 6,
-      "codename": "change_genre"
+      "codename": "change_locationcomment"
     }
   },
   {
     "model": "auth.permission",
     "pk": 23,
     "fields": {
-      "name": "Can delete genre",
+      "name": "Can delete location comment",
       "content_type": 6,
-      "codename": "delete_genre"
+      "codename": "delete_locationcomment"
     }
   },
   {
     "model": "auth.permission",
     "pk": 24,
     "fields": {
-      "name": "Can view genre",
+      "name": "Can view location comment",
       "content_type": 6,
-      "codename": "view_genre"
+      "codename": "view_locationcomment"
     }
   },
   {
@@ -696,7 +1371,7 @@
     "pk": 3,
     "fields": {
       "app_label": "movies",
-      "model": "location"
+      "model": "genre"
     }
   },
   {
@@ -704,7 +1379,7 @@
     "pk": 4,
     "fields": {
       "app_label": "movies",
-      "model": "movie"
+      "model": "location"
     }
   },
   {
@@ -712,7 +1387,7 @@
     "pk": 5,
     "fields": {
       "app_label": "movies",
-      "model": "locationcomment"
+      "model": "movie"
     }
   },
   {
@@ -720,7 +1395,7 @@
     "pk": 6,
     "fields": {
       "app_label": "movies",
-      "model": "genre"
+      "model": "locationcomment"
     }
   },
   {
@@ -781,10 +1456,10 @@
   },
   {
     "model": "sessions.session",
-    "pk": "kwondbx0ib2h8wvpcw3ysxgc9ryxmenb",
+    "pk": "k07if199hfti2d0lndh1zi8n0h4lean0",
     "fields": {
-      "session_data": ".eJxVjEEOwiAQRe_C2hBgEMSl-56BTIdBqgaS0q6Md7dNutDtf-_9t4i4LiWunec4JXEVWpx-txHpyXUH6YH13iS1uszTKHdFHrTLoSV-3Q7376BgL1t9AUeQg1bowKFRLoD1hMTE6MEmkxA2hYz17syZCNlmRR6YNARjxecL4ZU4JQ:1lkq6P:xuc1wWEVV9BmZpOFrbacsQzP3UxDM9o5LJdUBtaYwW4",
-      "expire_date": "2021-06-06T15:33:17.116Z"
+      "session_data": ".eJxVjDsOwjAQBe_iGlnOxr-lpOcM1tre4ACypTipEHeHSCmgfTPzXiLQtpawdV7CnMVZgDj9bpHSg-sO8p3qrcnU6rrMUe6KPGiX15b5eTncv4NCvXxrPxKCHmEwatKR2SeMTmHGZK0xlDxrNfjJwWgxKWDSGUxk7wwCRpPF-wPLPzdZ:1lluqO:UnFJ6RIK1tSanOfNpTXW6MxsI6FnKnzZH1bU90uxTT0",
+      "expire_date": "2021-06-09T14:49:12.070Z"
     }
   }
 ]

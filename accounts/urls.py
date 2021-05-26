@@ -7,6 +7,7 @@ app_name = 'accounts'
 
 urlpatterns = [
     path('signup/', views.signup, name='signup'),
+    path('<str:username>/profile/', views.ProfileList.as_view(), name='profile'),
 
     #JWT 인증관련 url
     path('api-token-auth/', obtain_jwt_token),

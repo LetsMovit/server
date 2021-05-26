@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from .models import Movie, Location, LocationComment, Genre
 from accounts.models import User
-from accounts.serializers import UserSerializer
+# from accounts.serializers import UserSerializer
 
 # try:
 #     from accounts.serializers import UserSerializer
@@ -11,6 +11,23 @@ from accounts.serializers import UserSerializer
 #     UserSerializer = sys.modules[__package__ + '.UserSerializer']
 
 ''' 1. accounts.serializers에 있는 Serializer 가져오기 '''
+class UserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+    comments = serializers.PrimaryKeyRelatedField(many=True, queryset=LocationComment.objects.all())
+
+    # M:N ========================================================
+    # User - Genre
+    # like_genres = GenreSerializer(read_only=True, many=True)
+    # # User - LikeLocation
+    # like_locations = LocationSerializer(read_only=True, many=True)
+    # # User - LikeComment
+    # like_comments = LocationCommentSerializer(read_only=True, many=True)
+
+    class Meta:
+        model = User
+        fields = ('username', 'password', 'email', 'comments', )
+
+
 
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
@@ -42,32 +59,14 @@ class LocationCommentSerializer(serializers.ModelSerializer):
         read_only_fields = ('location', 'like_users', 'user' )
 
 
-class UserSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
-    comments = serializers.PrimaryKeyRelatedField(many=True, queryset=LocationComment.objects.all())
-
-    # M:N ========================================================
-    # User - Genre
-    like_genres = GenreSerializer(read_only=True, many=True)
-    # User - LikeLocation
-    like_locations = LocationSerializer(read_only=True, many=True)
-    # User - LikeComment
-    like_comments = LocationCommentSerializer(read_only=True, many=True)
-
-    class Meta:
-        model = User
-        fields = ('username', 'password', 'email', 'like_genres', 'like_locations', 'like_comments' )
-
-
-
 class MovieSerializer(serializers.ModelSerializer):
     # Movie - Genre =  M:N
-    # genres = GenreSerializer(read_only=True, many=True)
+    genres = GenreSerializer(read_only=True, many=True)
     # locations = serializers.PrimaryKeyRelatedField(many=True, queryset=Location.objects.all())
 
     class Meta:
         model = Movie
-        fields = '__all__'
+        fields = ('id', 'genres', 'title', 'overview', 'poster_path', 'backdrop_path', 'vote_average', 'movie_id', )
         read_only_fields = ('locations', )
 
 
