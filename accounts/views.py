@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404
 
 from .models import User, Profile
 from .serializers import UserSerializer, ProfileSerializer
+from movies.models import Genre
+from movies.serializers import GenreSerializer
+
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -48,6 +51,44 @@ def signup(request):
 
 
 
+
+
+
+
+class UserList(APIView):
+    authentication_classes = (JSONWebTokenAuthentication,)
+
+    """
+    GET or UPDATE User
+    """
+    def get(self, request, username):
+        print(username)
+        user = get_object_or_404(User, username=username)
+
+        serializer = UserSerializer(profile)
+        return Response(serializer.data)
+
+    def put(self, request, username):
+        user = get_object_or_404(User, username=username)
+        
+        temp = []
+        for i in request.data.get('like_genres'):
+            if i.isdigit():
+                genre = get_object_or_404(Genre, pk=int(i))
+                temp.append(genre)
+        
+        serializer = GenreSerializer(temp, many=True)
+        print(serializer)
+        serializer = UserSerializer(user, data=serializer.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+
+
+
 class ProfileList(APIView):
     authentication_classes = (JSONWebTokenAuthentication,)
 
@@ -58,7 +99,6 @@ class ProfileList(APIView):
         print(username)
         user = get_object_or_404(User, username=username)
         profile = get_object_or_404(Profile, user_id=user.id)
-        print(profile)
         serializer = ProfileSerializer(profile)
         return Response(serializer.data)
 

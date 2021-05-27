@@ -51,7 +51,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
 
         fields = ('id', 'username', 'password', 'email', 'like_genres', 'like_locations', 'like_comments', )
-        read_only = ('password', )
+        read_only = ('password', 'like_genres' )
     
 
 class ProfileSerializer(serializers.ModelSerializer):

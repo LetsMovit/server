@@ -7,10 +7,12 @@ app_name = 'accounts'
 
 urlpatterns = [
     path('signup/', views.signup, name='signup'),
+    path('api-token-auth/', obtain_jwt_token),
+    
+    path('<str:username>/', views.UserList.as_view(), name='user'),
     path('<str:username>/profile/', views.ProfileList.as_view(), name='profile'),
 
     #JWT 인증관련 url
-    path('api-token-auth/', obtain_jwt_token),
 
     # path('api-token-refresh/', refresh_jwt_token), # refresh
     # path('api-token-verify/', verify_jwt_token),   # verify another place
