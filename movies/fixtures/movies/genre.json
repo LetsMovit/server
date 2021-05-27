@@ -59,176 +59,32 @@
 		"model": "movies.genre",
 		"pk": 8,
 		"fields": {
-			"genre_id": 28,
-			"genre_name": "액션"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 9,
-		"fields": {
 			"genre_id": 12,
 			"genre_name": "모험"
 		}
 	},
 	{
 		"model": "movies.genre",
+		"pk": 9,
+		"fields": {
+			"genre_id": 53,
+			"genre_name": "스릴러"
+		}
+	},
+	{
+		"model": "movies.genre",
 		"pk": 10,
 		"fields": {
-			"genre_id": 18,
-			"genre_name": "드라마"
+			"genre_id": 36,
+			"genre_name": "역사"
 		}
 	},
 	{
 		"model": "movies.genre",
 		"pk": 11,
 		"fields": {
-			"genre_id": 53,
-			"genre_name": "스릴러"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 12,
-		"fields": {
-			"genre_id": 18,
-			"genre_name": "드라마"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 13,
-		"fields": {
-			"genre_id": 36,
-			"genre_name": "역사"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 14,
-		"fields": {
-			"genre_id": 28,
-			"genre_name": "액션"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 15,
-		"fields": {
-			"genre_id": 35,
-			"genre_name": "코미디"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 16,
-		"fields": {
-			"genre_id": 53,
-			"genre_name": "스릴러"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 17,
-		"fields": {
-			"genre_id": 18,
-			"genre_name": "드라마"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 18,
-		"fields": {
-			"genre_id": 36,
-			"genre_name": "역사"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 19,
-		"fields": {
-			"genre_id": 18,
-			"genre_name": "드라마"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 20,
-		"fields": {
-			"genre_id": 18,
-			"genre_name": "드라마"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 21,
-		"fields": {
-			"genre_id": 28,
-			"genre_name": "액션"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 22,
-		"fields": {
-			"genre_id": 35,
-			"genre_name": "코미디"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 23,
-		"fields": {
-			"genre_id": 80,
-			"genre_name": "범죄"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 24,
-		"fields": {
 			"genre_id": 10752,
 			"genre_name": "전쟁"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 25,
-		"fields": {
-			"genre_id": 35,
-			"genre_name": "코미디"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 26,
-		"fields": {
-			"genre_id": 18,
-			"genre_name": "드라마"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 27,
-		"fields": {
-			"genre_id": 36,
-			"genre_name": "역사"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 28,
-		"fields": {
-			"genre_id": 80,
-			"genre_name": "범죄"
-		}
-	},
-	{
-		"model": "movies.genre",
-		"pk": 29,
-		"fields": {
-			"genre_id": 35,
-			"genre_name": "코미디"
 		}
 	}
 ]
