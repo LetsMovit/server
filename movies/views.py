@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
-from .models import Movie, Location, LocationComment
+from .models import Movie, Location, LocationComment, Genre
 from accounts.models import User
 from accounts.serializers import UserSerializer
 from .serializers import (
@@ -7,7 +7,7 @@ from .serializers import (
                 LocationSerializer,
                 LocationCommentSerializer,
                 # CommentImageSerializer,
-                # GenreSerializer,
+                GenreSerializer,
             )
 
 from rest_framework.views import APIView
@@ -23,10 +23,10 @@ class GenreList(APIView):
     """
     List all Genre
     """
-    # def get(self, request):
-    #     genres = Genre.objects.all()
-    #     serializer = GenreSerializer(genres, many=True)
-    #     return Response(serializer.data)
+    def get(self, request):
+        genres = Genre.objects.all()
+        serializer = GenreSerializer(genres, many=True)
+        return Response(serializer.data)
 
 
 class LocationListAll(APIView):
