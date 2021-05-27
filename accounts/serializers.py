@@ -46,11 +46,12 @@ class UserSerializer(serializers.ModelSerializer):
     like_locations = LocationSerializer(read_only=True, many=True)
     # User - LikeComment
     like_comments = LocationCommentSerializer(read_only=True, many=True)
+    comments = LocationCommentSerializer(read_only=True, many=True)
 
     class Meta:
         model = User
 
-        fields = ('id', 'username', 'password', 'email', 'like_genres', 'like_locations', 'like_comments', )
+        fields = ('id', 'username', 'password', 'email', 'comments','like_genres', 'like_locations', 'like_comments', )
         read_only = ('password', 'like_genres' )
     
 

@@ -64,8 +64,10 @@ class UserList(APIView):
     def get(self, request, username):
         print(username)
         user = get_object_or_404(User, username=username)
+        user_comments = User.objects.filter(username=username).prefetch_related('locationcomment')
 
-        serializer = UserSerializer(profile)
+        serializer = UserSerializer(user_comments, many=True)
+        print(serializer.data)
         return Response(serializer.data)
 
     def put(self, request, username):
