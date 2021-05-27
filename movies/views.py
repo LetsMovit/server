@@ -115,6 +115,19 @@ class LocationCommentList(APIView):
             serializer.save(location=location, user=request.user)
             return Response(serializer.data)
 
+class LocationCommentDetail(APIView):
+    authentication_classes = (JSONWebTokenAuthentication,)
+
+
+    def delete(self, request, comment_pk, format=None):
+        comment = get_object_or_404(LocationComment, pk=comment_pk)
+        print(comment)
+        comment.delete()
+        context = {
+            'text': '삭제가 완료되었습니다.'
+        }
+        return Response(context)
+
 # @api_view(['POST'])
 # @permission_classes((IsAuthenticated,))
 class LocationLikeList(APIView):
